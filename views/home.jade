@@ -10,14 +10,17 @@ html
         section.section
           div.container
             h1.title INPS bad cache replica
-            div Questo progetto open-source prova a replicare le condizioni del data leak dell'INPS avvenuto il 1 Aprile 2020.
+            div Questo progetto #[a(href="https://github.com/LorenzoZaccagnini/inps-bad-cache") open-source #[span element]] realizzato da #[a(href="https://www.linkedin.com/in/lorenzo-zaccagnini/") Lorenzo Zaccagnini #[span element]] prova a replicare le condizioni del data leak dell'INPS avvenuto il 1 Aprile 2020.
             br
             div Ci sono due sezioni, una che usa la cache e replica le vulnerabilità riscontrate sul sito dell'INPS ed un'altra senza cache che mostra il risultato corretto.
             br
             div Di quale utente vuoi sapere il colore preferito?
+            div(class='has-text-weight-bold') Provate più volte con nomi differenti
             br
             div(id='pippo')
+            br
             button.button(type='button', id='send_button') Vedi dati
+            br
             br
             div(id='pippoAvecCache')
             br

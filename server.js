@@ -13,7 +13,7 @@ var cache = (duration) => {
     let key = ('__express__' + req.originalUrl).split('?')[0] || req.url.split('?')[0]
     let cachedBody = mcache.get(key)
     if (cachedBody) {
-      res.send(cachedBody)
+      res.send(JSON.parse(cachedBody))
       return
     } else {
       res.sendResponse = res.send

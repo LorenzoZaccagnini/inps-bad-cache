@@ -29,19 +29,19 @@ $(document).ready(function() {
         "method": "GET",
       }
 
-      $.ajax(settings).done(function(response) {
-        $pippoTitle = $(`<h2>Risultato con Cache (Vulnerabilità dell'INPS)</h2>`);
-        $pippoDiv = $(`<div>Nome: ${response.name} <br />Colore: ${response.color}</div>`);
-        $("#pippoPasCache").empty().append($pippoTitle);
-        $("#pippoPasCache").append($pippoDiv);
-
-      });
-
       $.ajax(settings_cache).done(function(response) {
-        $pippoTitle = $(`<h2>Risultato corretto senza Cache</h2>`);
+        $pippoTitle = $(`<h4 class="title is-4">Risultato con Cache (Vulnerabilità dell'INPS)</h4>`);
         $pippoDiv = $(`<div>Nome: ${response.name} <br />Colore: ${response.color}</div>`);
         $("#pippoAvecCache").empty().append($pippoTitle);
         $("#pippoAvecCache").append($pippoDiv);
+
+      });
+
+      $.ajax(settings).done(function(response) {
+        $pippoTitle = $(`<h4 class="title is-4">Risultato corretto senza Cache</h4>`);
+        $pippoDiv = $(`<div>Nome: ${response.name} <br />Colore: ${response.color}</div>`);
+        $("#pippoPasCache").empty().append($pippoTitle);
+        $("#pippoPasCache").append($pippoDiv);
 
       });
     }

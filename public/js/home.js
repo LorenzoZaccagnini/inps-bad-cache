@@ -30,7 +30,7 @@ $(document).ready(function() {
       }
 
       $.ajax(settings_cache).done(function(response) {
-        $pippoTitle = $(`<h4 class="title is-4">Il colore preferito di ${response.name}, risultato con Cache (Vulnerabilità dell'INPS)</h4>`);
+        $pippoTitle = $(`<h4 class="title is-4">Risultato con Cache (Vulnerabilità dell'INPS)</h4>`);
         $pippoDiv = $(`<div>Nome: ${response.name} <br />Colore: ${response.color}</div>`);
         $("#pippoAvecCache").empty().append($pippoTitle);
         $("#pippoAvecCache").append($pippoDiv);
@@ -38,11 +38,11 @@ $(document).ready(function() {
       });
 
       $.ajax(settings).done(function(response) {
-        $pippoTitle = $(`<h4 class="title is-4">Il colore preferito di ${response.name}, risultato corretto senza Cache</h4>`);
+        $("#pippoNome").empty().append(`<h3 class="title is-4">Hai scelto ${response.name})</h3>`);
+        $pippoTitle = $(`<h4 class="title is-4">Risultato corretto senza Cache</h4>`);
         $pippoDiv = $(`<div>Nome: ${response.name} <br />Colore: ${response.color}</div>`);
         $("#pippoPasCache").empty().append($pippoTitle);
         $("#pippoPasCache").append($pippoDiv);
-
       });
     }
   });

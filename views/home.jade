@@ -1,12 +1,26 @@
 doctype html
 html
     head
-        title Jade Page
-        script(src='home.js')
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title INPS bad cache replica
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css')
 
     body
-        h1 INPS cache replica
-        div Questo progetto open-source prova a replicare le condizioni del data leak dell'INPS.
-        div Ci sono due sezioni, una che usa la cache e replica le vulnerabilità riscontrate sul sito dell'INPS ed un'altra senza cache che mostra il risultato corretto.
-        div Di quale utente vuoi sapere il colore preferito? 
-        button(type='button', id='send_by_button') Vedi dati
+        section.section
+          div.container
+            h1.title INPS bad cache replica
+            div Questo progetto open-source prova a replicare le condizioni del data leak dell'INPS avvenuto il 1 Aprile 2020.
+            br
+            div Ci sono due sezioni, una che usa la cache e replica le vulnerabilità riscontrate sul sito dell'INPS ed un'altra senza cache che mostra il risultato corretto.
+            br
+            div Di quale utente vuoi sapere il colore preferito?
+            br
+            div(id='pippo')
+            button.button(type='button', id='send_button') Vedi dati
+            br
+            div(id='pippoAvecCache')
+            br
+            div(id='pippoPasCache')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        script(src='/public/js/home.js')

@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var mcache = require('memory-cache');
 
+app.locals.env = process.env;
 app.use('/public', express.static(__dirname + '/public'));
 app.set('view engine', 'jade');
 

@@ -1,3 +1,6 @@
+require('dotenv').config();
+
+
 $(document).ready(function() {
   console.log('ready');
 
@@ -18,14 +21,14 @@ $(document).ready(function() {
       var settings = {
         "async": true,
         "crossDomain": true,
-        "url": `http://localhost:3000/user?id=${radioValue}`,
+        "url": `https://badcache.herokuapp.com/user?id=${radioValue}`,
         "method": "GET",
       }
 
       var settings_cache = {
         "async": true,
         "crossDomain": true,
-        "url": `http://localhost:3000/user_cache?id=${radioValue}`,
+        "url": `https://badcache.herokuapp.com/user_cache?id=${radioValue}`,
         "method": "GET",
       }
 

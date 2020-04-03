@@ -38,7 +38,7 @@ $(document).ready(function() {
       });
 
       $.ajax(settings).done(function(response) {
-        $("#pippoNome").empty().append(`<h3 class="title is-4">Hai scelto ${response.name})</h3>`);
+        $("#pippoNome").empty().append(`<h3 class="title is-4">Hai scelto ${response.name}</h3>`);
         $pippoTitle = $(`<h4 class="title is-4">Risultato corretto senza Cache</h4>`);
         $pippoDiv = $(`<div>Nome: ${response.name} <br />Colore: ${response.color}</div>`);
         $("#pippoPasCache").empty().append($pippoTitle);

@@ -1,7 +1,9 @@
 # INPS bad cache replica
-Questo progetto open-source realizzato da Lorenzo Zaccagnini prova a replicare le condizioni del data leak dell'INPS avvenuto il 1 Aprile 2020.
+This open-source project created by Lorenzo Zaccagnini tries to replicate the conditions of the INPS data leak that occurred on April 1, 2020.
 
-Ci sono due sezioni, una che usa la cache e replica le vulnerabilità riscontrate sul sito dell'INPS ed un'altra senza cache che mostra il risultato corretto.
+[link](https://www.dataguidance.com/news/italy-garante-starts-investigation-over-inps-data-breach)
 
-Di quale utente vuoi sapere il colore preferito?
-Provate più volte con nomi differenti
+There are two sections, one that uses the cache and replicates the vulnerabilities found on the INPS site and another without cache that shows the correct result.
+
+Which user do you want to know the favorite color?
+Try several times with different names
